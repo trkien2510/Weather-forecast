@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/icon.png" type="image/png">
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search">
+            <input id="input_city_name" type="text" placeholder="Tên tỉnh thành">
+            <button id="btn_find" type="button">Tìm kiếm</button>
+        </div>
+        <div class="info">
+            <div class="current-info" id="current-info">
+                <div class="date-time-location">
+                    <div class="date-time">
+                        <div class="time" id="time">
+                            00:00 AM
+                        </div>
+                        <div class="date" id="date">
+                            Thứ 2, 1 Tháng 1
+                        </div>
+                    </div>
+                    <div class="location">
+                        <img class="img-location" src="imgs/location.png" width="40px" height="40px">
+                        <span class="city" id="city">City</span>
+                        <span>/</span>
+                        <span class="country" id="country">Country</span>
+                        <br>
+                        <a class="open-map" id="map-link" href="https://www.google.com/maps" target="_blank"><b>Bản đồ</b></a>
+                    </div>
+                </div>
+                <div class="temperature-other">
+                    <div class="temperature">
+                        <div class="number" id="number"><span><b>0°C</b></span></div>
+                        <span><button id="c" type="button">C</button><small>|</small><button id="f" type="button">F</button></span>
+                        <img id="icon" src=""></img>
+                    </div>
+                    <div class="other">
+                        <div class="other1">
+                            <span>Độ ẩm</span>
+                            <span id="other1">0</span>
+                        </div>
+                        <div class="other2">
+                            <span>Áp suất</span>
+                            <span id="other2">0</span>
+                        </div>
+                        <div class="other3">
+                            <span>Tốc độ gió</span>
+                            <span id="other3">0</span>
+                        </div>
+                        <div class="other4">
+                            <span>Tầm nhìn</span>
+                            <span id="other4">0</span>
+                        </div>
+                        <div class="other5">
+                            <span>Lượng mưa 1h qua</span>
+                            <span id="other5">0</span>
+                        </div>
+                        <div class="other6">
+                            <span>Phần trăm mây</span>
+                            <span id="other6">0</span>
+                        </div>
+                        <div class="other7">
+                            <span>Vị trí</span>
+                            <span id="other7">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hourly">
+                    <div class="cards">
+                        <div class="hourly-card" id="hourly-card-1">
+                            <h4 class="card-title">12:00</h4>
+                            <img class="card-img" src="" width="70px" height="70px">
+                            <p class="card-text">note<br>0°c</p>
+                        </div>
+                        <div class="hourly-card" id="hourly-card-2">
+                            <h4 class="card-title">12:00</h4>
+                            <img class="card-img" src="" width="70px" height="70px">
+                            <p class="card-text">note<br>0°c</p>
+                        </div>
+                        <div class="hourly-card" id="hourly-card-3">
+                            <h4 class="card-title">12:00</h4>
+                            <img class="card-img" src="" width="70px" height="70px">
+                            <p class="card-text">note<br>0°c</p>
+                        </div>
+                        <div class="hourly-card" id="hourly-card-4">
+                            <h4 class="card-title">12:00</h4>
+                            <img class="card-img" src="" width="70px" height="70px">
+                            <p class="card-text">note<br>0°c</p>
+                        </div>
+                        <div class="hourly-card" id="hourly-card-5">
+                            <h4 class="card-title">12:00</h4>
+                            <img class="card-img" src="" width="70px" height="70px">
+                            <p class="card-text">note<br>0°c</p>
+                        </div>
+                        <div class="hourly-card" id="hourly-card-6">
+                            <h4 class="card-title">12:00</h4>
+                            <img class="card-img" src="" width="70px" height="70px">
+                            <p class="card-text">note<br>0°c</p>
+                        </div>
+                        <div class="hourly-card" id="hourly-card-7">
+                            <h4 class="card-title">12:00</h4>
+                            <img class="card-img" src="" width="70px" height="70px">
+                            <p class="card-text">note<br>0°c</p>
+                        </div>
+                        <div class="hourly-card" id="hourly-card-8">
+                            <h4 class="card-title">12:00</h4>
+                            <img class="card-img" src="" width="70px" height="70px">
+                            <p class="card-text">note<br>0°c</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast-info">
+                <div>
+                    <h1 class="five-days">Dự báo 5 ngày tới</h1>
+                </div>
+                <div class="forecast">
+                    <div class="forecast-day" id="forecast-day-1">
+                        <span class="next-1-day">Thứ 2, 1/1</span>
+                        <span class="note" id="note-1">note</span>
+                        <br>
+                        <img id="img-1" src="" width="60px" height="60px">
+                        <span id="temp-1">0°C</span>
+                    </div>
+                    <div class="forecast-day" id="forecast-day-2">
+                        <span class="next-2-day">Thứ 2, 1/1</span>
+                        <span class="note" id="note-2">note</span>
+                        <br>
+                        <img id="img-2" src="" width="60px" height="60px">
+                        <span id="temp-2">0°C</span>
+                    </div>
+                    <div class="forecast-day" id="forecast-day-3">
+                        <span class="next-3-day">Thứ 2, 1/1</span>
+                        <span class="note" id="note-3">note</span>
+                        <br>
+                        <img id="img-3" src="" width="60px" height="60px">
+                        <span id="temp-3">0°C</span>
+                    </div>
+                    <div class="forecast-day" id="forecast-day-4">
+                        <span class="next-4-day">Thứ 2, 1/1</span>
+                        <span class="note" id="note-4">note</span>
+                        <br>
+                        <img id="img-4" src="" width="60px" height="60px">
+                        <span id="temp-4">0°C</span>
+                    </div>
+                    <div class="forecast-day" id="forecast-day-5">
+                        <span class="next-5-day">Thứ 2, 1/1</span>
+                        <span class="note" id="note-5">note</span>
+                        <br>
+                        <img id="img-5" src="" width="60px" height="60px">
+                        <span id="temp-5">0°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
