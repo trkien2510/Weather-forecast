@@ -111,6 +111,8 @@ async function getInformation(url = null) {
         const response = await fetch(url);
         const data = await response.json();
 
+        console.log(data);
+
         latitude = data.coord.lat.toFixed(2);
         longitude = data.coord.lon.toFixed(2);
 
@@ -243,7 +245,9 @@ async function getDailyForecast() {
         const response = await fetch(url);
         const data = await response.json();
 
-        for (let i = 6; i < data.list.length; i += 8) {
+        console.log(data);
+
+        for (let i = 7; i < data.list.length; i += 8) {
             let day = days[currentDate.getDay()];
             let month = months[currentDate.getMonth()];
             let dateString = `${day}, ${currentDate.getDate()} ${month}`;
